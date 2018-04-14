@@ -8,10 +8,10 @@ class test_simple_calc(unittest.TestCase):
         self.assertEqual(arithmetics(-1, 1, "add"), 0)
         self.assertEqual(arithmetics(-1, -1, "add"), -2)
 
-    def test_substract(self):
-        self.assertEqual(arithmetics(1, 1, "substract"), 0)
-        self.assertEqual(arithmetics(-1, 1, "substract"), -2)
-        self.assertEqual(arithmetics(-1, -1, "substract"), 0)
+    def test_subtract(self):
+        self.assertEqual(arithmetics(1, 1, "subtract"), 0)
+        self.assertEqual(arithmetics(-1, 1, "subtract"), -2)
+        self.assertEqual(arithmetics(-1, -1, "subtract"), 0)
 
     def test_multiply(self):
         self.assertEqual(arithmetics(1, 1, "multiply"), 1)
