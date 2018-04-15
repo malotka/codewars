@@ -11,6 +11,10 @@ class test_sort_by_len(unittest.TestCase):
         with self.assertRaises(TypeError):
             sort([1, 3212, 223, 412122])
 
+if __name__ == '__main__':
+
+    unittest.main()
+
 
 #TODO sort words
 #TODO sort sentences
