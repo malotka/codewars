@@ -19,6 +19,8 @@ class test_fizz_buzz(unittest.TestCase):
         self.assertEqual(fizz_buzz(15), "fizzbuzz")
         self.assertEqual(fizz_buzz(30), "fizzbuzz")
 
+    def test_string_inserted(self):
+        self.assertEqual(fizz_buzz("abc"), 0)
 
 
 if __name__ == '__main__':
@@ -31,3 +33,4 @@ if __name__ == '__main__':
 # TODO when divided by 3 - fizz
 # TODO when divided by 5 - buzz
 # TODO when divided by 3 AND 5 - fizz buzz
+# TODO what if not a number?
