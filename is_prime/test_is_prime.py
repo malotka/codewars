@@ -28,3 +28,4 @@ class test_is_prime(unittest.TestCase):
 #for num <= 3 return true
 #for num > 3 check if modulo == 0
 #for any other input type - TypeError
+#TODO check what happens when FLOATS are used!!!!
