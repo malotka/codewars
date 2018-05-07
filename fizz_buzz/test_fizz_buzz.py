@@ -20,7 +20,9 @@ class test_fizz_buzz(unittest.TestCase):
         self.assertEqual(fizz_buzz(30), "fizzbuzz")
 
     def test_string_inserted(self):
-        self.assertEqual(fizz_buzz("abc"), 0)
+        self.assertEqual(fizz_buzz("abc"), None)
+        #with self.assertRaises(TypeError):
+        #    fizz_buzz("abc")
 
 
 if __name__ == '__main__':
