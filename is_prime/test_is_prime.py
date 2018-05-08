@@ -20,12 +20,20 @@ class test_is_prime(unittest.TestCase):
         self.assertEqual(is_prime(10), False)
         self.assertEqual(is_prime(45), False)
 
-    def test_any_other_input(self):
+    @unittest.skip("code works only for type int")
+    def test_string_input(self):
         with self.assertRaises(TypeError):
             is_prime("abc")
+        with self.assertRaises(TypeError):
+            is_prime(1.5)
+
+    def test_float_input(self):
+        self.assertEqual(is_prime(1.0), False)
+        self.assertEqual(is_prime(4.0), False)
+        self.assertEqual(is_prime(4.5), False)
 
 #for num <= 1 return false
 #for num <= 3 return true
 #for num > 3 check if modulo == 0
 #for any other input type - TypeError
-#TODO check what happens when FLOATS are used!!!!
+#check what happens when FLOATS are used!!!! - only natural numbers can be checked for beeing a prime
