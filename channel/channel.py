@@ -1,6 +1,5 @@
 import re
 import zipfile
-import string
 
 if __name__ == '__main__':
 
@@ -12,26 +11,18 @@ if __name__ == '__main__':
     """
     num = '90052'
 
-    result = ''
-    while True:
-
-        with open('channel\\{}.txt'.format(num)) as numbers:
-            data = numbers.read()
-            print(data)
-            match = pattern.search(data)
-
-            if match is None:
-                break
-            num = match.group(1)
+    result = []
 
     zf = zipfile.ZipFile('channel.zip')
-    for info in zf.infolist():
-        print(info)
-        print(info.comment)
-        print(info.filename)
 
-    print(result)
+    while True:
+        data = zf.read(num + '.txt').decode('utf-8')
+        result.append(zf.getinfo(num + '.txt').comment.decode('utf-8'))
+        print(data)
+        match = pattern.search(data)
+        if match is None:
+            break
+        num = match.group(1)
 
-
-
+    print("".join(result))
 
